@@ -1,0 +1,5 @@
+package com.emanager.springboot.controller;
+
+public class UsersController {
+
+}

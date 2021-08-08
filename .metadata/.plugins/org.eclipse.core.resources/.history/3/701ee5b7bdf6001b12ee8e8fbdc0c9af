@@ -1,0 +1,29 @@
+package com.emanager.springboot.controller;
+//create rest api
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.emanager.springboot.model.*;
+import com.emanager.springboot.repository.UsersRepository;
+
+import java.util.List;
+
+@CrossOrigin("*")
+@RestController
+@RequestMapping("/api/v1/")
+public class UsersController {
+	
+	@Autowired
+	private UsersRepository usersRepository;
+	
+	//get all employess
+	@GetMapping("/users")
+	public List<Users> getAllUsers(){
+		return usersRepository.findAll();
+		
+	}
+}
