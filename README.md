@@ -3,5 +3,5 @@
 Create database 
 
 name: emanager_db 
-Version : 8.0.26
+myVersion : 8.0.26
 IDE: MySQL Workbench
